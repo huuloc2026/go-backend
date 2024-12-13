@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"github.com/huuloc2026/go-backend.git/internal/routers"
+)
 
 func main() {
-	fmt.Println("Starting Server")
+	r := routers.NewRouter()
+	r.Run(":8002") // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
